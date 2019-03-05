@@ -4,7 +4,6 @@ Mr Viet Anh
 Many thanks for 
 
 - Mr Cian (help me to create inline)
-- Ms Thuy (help me to create inline for outlook)
 
 #version 4
 
