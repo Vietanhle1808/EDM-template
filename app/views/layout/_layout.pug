@@ -1,0 +1,33 @@
+include ../mixins/_mixins
+doctype html
+<html>
+  <head>
+    include ./_head.pug
+  </head>
+  <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#FFFFFF" style="margin:0; padding:0; -webkit-text-size-adjust:none; -ms-text-size-adjust:none;" data-gr-c-s-loaded="true" cz-shortcut-listen="true">
+    //begin table container
+    <table class="body-container wrapper">
+      <tr>
+        <td width="100%" style="vertical-align: top;">
+            //- Begin fix center for outlook
+            +ie-open({table:600})
+            //- Begin table content fix Gmail App in Ios
+            //- Begin table content
+            <table class="text-left"style="max-width:600px;width:100%;margin:0 auto;">
+              <tr>
+                <td class="wrapper-content">
+                  block content
+                </td>
+              </tr>
+            </table> 
+            //- End table content
+              //- End table content fix Gmail App in Ios
+            +ie-close
+            //- End fix center for outlook
+        </td>
+      </tr>
+    </table>
+    |<!--End table container-->
+  </body>
+</html>
+

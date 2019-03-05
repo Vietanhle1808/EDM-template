@@ -1,0 +1,465 @@
+@charset "UTF-8";
+/* Normalize.css */
+/* Contents of this file must be inlined to your newsletter in production */
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+li a,
+p a {
+  /* Set sexy underline styling for links except images */
+  text-decoration: none;
+  color: #2837b8 !important;
+  border-bottom: #d3d6f0 1px solid; }
+
+h1 {
+  /* Mail.ru <h1> styling fix */
+  font-size: 2em;
+  line-height: initial;
+  margin: 0.67em 0;
+  padding: 0; }
+
+table {
+  /* Null tables spaces */
+  border-spacing: 0;
+  border-collapse: collapse; }
+
+table td {
+  padding: 0;
+  margin: 0; }
+
+table th {
+  padding: 0;
+  font-weight: normal; }
+
+img {
+  /* Flexible images fix + prevent any borders for images */
+  max-width: 100%;
+  border: 0;
+  outline: 0;
+  /* Set image's ALT text styling */
+  color: #2837b8;
+  font-size: 14px; }
+
+ol,
+ul {
+  /* We don't touch horizontal margins to prevent hiding bullets in Oultook */
+  margin: 0;
+  padding: 0; }
+
+ol li,
+ul li {
+  margin: 0;
+  padding: 0; }
+
+/* Global
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* BG 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Width page
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Fonts
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Font-weight
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Font-size
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+table.text-center,
+th.text-center,
+td.text-center,
+h1.text-center,
+h2.text-center,
+h3.text-center,
+h4.text-center,
+h5.text-center,
+h6.text-center,
+p.text-center,
+span.text-center {
+  text-align: center; }
+
+table.text-left,
+th.text-left,
+td.text-left,
+h1.text-left,
+h2.text-left,
+h3.text-left,
+h4.text-left,
+h5.text-left,
+h6.text-left,
+p.text-left,
+span.text-left {
+  text-align: left; }
+
+table.text-right,
+th.text-right,
+td.text-right,
+h1.text-right,
+h2.text-right,
+h3.text-right,
+h4.text-right,
+h5.text-right,
+h6.text-right,
+p.text-right,
+span.text-right {
+  text-align: right; }
+
+span.text-center {
+  display: block;
+  width: 100%;
+  text-align: center; }
+
+.text-center {
+  text-align: center; }
+
+img.float-left {
+  float: left;
+  text-align: left; }
+
+img.float-right {
+  float: right;
+  text-align: right; }
+
+img.float-center,
+img.text-center {
+  margin: 0 auto;
+  float: none;
+  text-align: center; }
+
+table.float-center,
+td.float-center,
+th.float-center {
+  margin: 0 auto;
+  float: none;
+  text-align: left; }
+
+.float-center {
+  float: none; }
+
+.item-center {
+  margin: 0 auto;
+  vertical-align: middle; }
+
+.center {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto; }
+
+.text-left {
+  text-align: left !important; }
+
+.w-25 {
+  width: 25%; }
+
+.w-50 {
+  width: 50%; }
+
+.w-75 {
+  width: 75%; }
+
+.text-light {
+  color: #fff !important; }
+
+.text-small {
+  font-size: 11.2px;
+  color: #0a0a0a;
+  line-height: 1.5; }
+
+.text-underline {
+  text-decoration: underline; }
+
+.tran-cap {
+  text-transform: capitalize; }
+
+.tran-up {
+  text-transform: uppercase; }
+
+.text-primary {
+  color: #0a0a0a; }
+
+.text-secondary {
+  color: #471E6C; }
+
+.text-lead {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1d1d1d; }
+
+.text-bold {
+  font-weight: 700; }
+
+.text-tiny {
+  font-size: 10px;
+  color: #0a0a0a; }
+
+.line-height-15 {
+  line-height: 15px; }
+
+.text-black {
+  color: black; }
+
+.no_underline {
+  text-decoration: none; }
+
+.px-global {
+  padding: 0 30px; }
+
+.no-spacing {
+  padding: 0 !important;
+  margin: 0 !important; }
+
+.p-half-global {
+  padding: 15px; }
+
+.p-global {
+  padding: 30px; }
+
+.px-half-global {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.py-global {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+.py-half-global {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.px-global {
+  padding-left: 30px;
+  padding-right: 30px; }
+
+.pl-20 {
+  padding-left: 20px; }
+
+.vertical-top {
+  vertical-align: top; }
+
+.w-40 {
+  width: 40%; }
+
+.w-60 {
+  width: 60%; }
+
+.title-footer {
+  color: #2199e8; }
+
+body {
+  font-family: arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #0a0a0a;
+  background: #eeeeee;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  outline: none !important;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important; }
+
+img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  display: block; }
+
+p {
+  margin: 0 0 10px 0;
+  font-weight: 400; }
+
+small {
+  font-size: 11.2px;
+  color: #0a0a0a; }
+
+table {
+  margin: 0;
+  border-color: white;
+  border: none;
+  padding: 0;
+  width: 100%;
+  mso-table-lspace: 0pt !important;
+  mso-table-rspace: 0pt !important; }
+
+table td {
+  word-wrap: break-word;
+  margin: 0 !important;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: arial, sans-serif;
+  line-height: 21px; }
+
+table tr {
+  padding: 0;
+  word-wrap: break-word;
+  margin: 0; }
+
+table th {
+  word-wrap: break-word;
+  margin: 0 !important;
+  font-weight: 400;
+  font-family: arial, sans-serif;
+  line-height: 21px; }
+
+.body-container {
+  background: #fff;
+  max-width: 600px;
+  margin: 0 auto; }
+
+.mso-center {
+  mso-table-lspace: 0pt !important;
+  mso-table-rspace: 0pt !important;
+  word-wrap: break-word;
+  margin: 0 auto; }
+
+.max-width {
+  width: 600px; }
+
+.bg-light-green {
+  background: #F2F8EC; }
+
+.bg-pink-light {
+  background: #ece8f0; }
+
+.bg-secondary {
+  background: #471E6C; }
+
+hr {
+  margin: 10px 0; }
+
+.bg-gray {
+  background: #f7f7f7; }
+
+a, a:hover, a:visited, a:hover:visited {
+  color: black;
+  cursor: auto; }
+
+.line-heigh-0 {
+  line-height: 0px !important;
+  mso-line-height-rule: exactly; }
+
+.table-header-bg {
+  background: #471E6C;
+  text-align: left;
+  color: #fff; }
+  .table-header-bg .px-global {
+    padding: 15px 30px; }
+
+.section_why ul li {
+  margin-bottom: 5px; }
+
+.section-shipping .shipping-info th {
+  text-transform: capitalize;
+  width: 30%;
+  font-size: 16px;
+  color: #666;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.32px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+  text-align: left; }
+
+.section-shipping .shipping-info td {
+  font-weight: bold; }
+
+.section-shipping.registration-detail th {
+  font-size: 14px;
+  text-transform: none; }
+
+.contact-us {
+  font-size: 16px; }
+  .contact-us .text-contact {
+    font-size: 16px;
+    line-height: 25px; }
+    .contact-us .text-contact a {
+      color: #2199e8; }
+
+.section-contact-us .contact-us-info tr > th {
+  text-transform: capitalize;
+  width: 30%;
+  font-size: 16px;
+  color: #666;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.32px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+  text-align: left; }
+
+.section-contact-us .contact-us-info tr > td {
+  border-collapse: collapse !important;
+  color: #0a0a0a;
+  font-weight: 700;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  letter-spacing: -0.32px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word; }
+
+.section-contact-us .contact-us-info tr:last-child th {
+  vertical-align: top; }
+
+table.table-border {
+  max-width: 100%; }
+  table.table-border th {
+    color: inherit; }
+  table.table-border th, table.table-border td {
+    border: 1px solid #1d1d1d;
+    padding: 8px;
+    padding-right: 8px !important;
+    vertical-align: middle; }
+
+.table-border-mobile {
+  max-width: 100%;
+  display: none; }
+  .table-border-mobile tr > th {
+    color: inherit;
+    max-width: 250px; }
+  .table-border-mobile th, .table-border-mobile td {
+    border: solid 1px black;
+    padding: 8px;
+    padding-right: 8px !important; }
+
+.request_to_user .section-shipping .shipping-info td {
+  font-weight: normal; }
+
+.product-details h6 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0;
+  text-transform: uppercase; }
+
+.product-details p {
+  padding-bottom: 0;
+  margin: 0; }
+
+.footer > tbody > tr > td {
+  padding-bottom: 15px; }
+
+.section-send-to-me .send-to-me .title-header {
+  color: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: -0.28px;
+  line-height: 20px;
+  margin: 0;
+  margin-bottom: 0;
+  padding: 0;
+  padding-bottom: 0 !important;
+  text-align: left;
+  text-transform: uppercase;
+  word-wrap: normal; }
