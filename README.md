@@ -1,44 +1,58 @@
-# FE starter with Gulp, PUG, SASS
+#Create by:
+Mr Viet Anh
 
-This is a Pug and Sass starter project using gulp for task automation.
+#version 6 Final
 
-## Local Resources Included:
+This EDM template for create a new project EDM.
 
-- Normalize CSS for reset CSS on browsers.
+How does it work?
+1. build EDM cross - all media.
 
-## Gulp Tasks:
+How does it help?
+1. fixed Gmail App in Ios
+2. Fixed center in Outlook
+3. Can Use Gulp (pug + Scss) to build EDM
+4. maintainance is very easy with variables file.
+5. setup render only 1 file css in app/css from scss
+6. With edm in Siebel, you must make sure that between <td>  and (in tag td) tag style will not have "enter"
 
-On the gulp side there are utilities listed bellow
+How can you help me?
 
-- compile sass
-- live browser reload
-- concat css into one file and minify it
-- auto prefix css
-- concat js into one file and minify it
-- minify images
-- cache minified images
-- send all above into a dist folder + copy fonts
-- clean unused files
-- ESLint JavaScript code
-- critical CSS
+1. Fix file gulpfile.js to remove any no need syntax (js, compress)
+2. continue...
+
 
 ## How to use:
 
 1. Clone to your desktop.
 2. Run `npm install`.
 3. Run `gulp` to generate the project and be able to make changes as needed.
-4. Stop the gulp, and run `gulp build` to build your site.
-5. Copy the dist directory to your server and you are set.
-6. Deploy critical css:
-- HTML in dist folder:
-  + Remove line <link rel="stylesheet" type="text/css" href="css/criticalCSS.css"> on head
-  + Copy all code inside "dist/css/criticalCSS.css" to <style></style> on head
+4. You should re-style variables
+5. create components
+6. style components 
+7. comment file file-style-header/_media-responsive.scss
+8. Stop the gulp, and run `gulp build` to build your site.
+9. Inline final html with file app/css/style.css
+8. copy style responsive in _media-responsive.scss style into file final in head tag <style></style>
+9. done.....!
+
 
 ## JS plugin listing to use:
-1. Slider carousel:
+
+1. Headroom:
+http://wicky.nillia.ms/headroom.js/
+
+2. Inview:
+https://camwiegert.github.io/in-view/
+
+3. Slider carousel:
 https://github.com/ganlanyuan/tiny-slider
 
+3. Parallax scrolling:
+https://github.com/nk-o/jarallax
+
 ## CSS / SASS Styleguide
+
 1. Airbnb:
 https://github.com/airbnb/css
 

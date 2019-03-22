@@ -1,3 +1,205 @@
-.container {
-  @extend %container;
+//============= typo ==================//
+
+.body-container{
+  background: $color-bg-table;
 }
+
+// img
+img {
+  display: block;
+  -ms-interpolation-mode: bicubic;
+}
+
+p {
+  margin: 0 0 $paragraph-margin-bottom 0;
+  font-weight: $font-weight-regular;
+}
+
+.mso-center {
+  mso-table-lspace: 0pt !important;
+  mso-table-rspace: 0pt !important;
+  word-wrap: break-word;
+  margin: 0 auto;
+}
+
+.max-width {
+  width: $max-width;
+}
+
+// bg
+.bg-light-green {
+  background: $color-light-green;
+}
+
+.bg-pink-light {
+  background: $pink-light;
+}
+
+.bg-secondary {
+  background: $secondary-color;
+}
+.bg-gray{
+  background: $gray;
+}
+
+// Width
+.w-25{
+  width: 25%;
+}
+.w-40{
+  width: 40%;
+}
+.w-50{
+  width: 50%;
+}
+.w-60{
+  width: 60%;
+}
+.w-75{
+  width: 75%;
+}
+.w-100{
+  width: 100%;
+}
+
+//spacing
+.no-spacing {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.vertical-top{
+  vertical-align: top;
+}
+
+
+// Padding
+
+.p-global {
+  padding: $global-padding;
+}
+.p-half-global {
+  padding: $global-half-padding;
+}
+.px-half-global{
+  padding-left: $global-half-padding;
+  padding-right: $global-half-padding;;
+}
+
+.py-global {
+  padding-top: $global-padding;
+  padding-bottom: $global-padding;
+}
+
+.px-global {
+  padding-left: $global-padding;
+  padding-right: $global-padding;
+}
+.py-half-global {
+  padding-top: $global-padding/2;
+  padding-bottom: $global-padding/2;
+}
+.p-extra{
+  padding: $global-padding-extra $global-padding-extra;
+}
+.p-extra-y {
+  padding-top: $global-padding-extra;
+  padding-bottom: $global-padding-extra;
+}
+.p-extra-x {
+  padding-left: $global-padding-extra;
+  padding-right: $global-padding-extra;
+}
+
+
+// TEXT
+
+.text-small {
+  font-size: $small-font-size;
+  color: $small-font-color;
+  line-height: 1.5;
+}
+
+.text-light {
+  color: $light !important;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-remove-underline {
+  text-decoration: none !important;
+}
+
+.tran-cap{
+  text-transform: capitalize;
+}
+
+.tran-up{
+  text-transform: uppercase;
+}
+.text-primary {
+  color: $primary-color;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+.text-lead {
+  font-size: $lead-font-size;
+  font-weight: $font-weight-bold;
+  color: $dark;
+}
+
+.text-bold {
+  font-weight: $font-weight-bold;
+}
+
+.text-tiny {
+  font-size: $tiny-font-size;
+  color: $primary-color;
+}
+
+.text-black{
+  color: $dark;
+}
+
+small {
+  font-size: $small-font-size;
+  color: $small-font-color;
+}
+.line-heigh-0{
+  line-height: 0px !important;
+  mso-line-height-rule: exactly;
+}
+
+.text-white{
+  color: #FFFFFF !important;
+}
+.text-center{
+  text-align: center;
+}
+.border_bottom{
+  border-bottom: 1px solid black;
+}
+.text-gray{
+  color: $gray;
+}
+.font-bold{
+  font-weight: bold;
+}
+
+// more option
+.no_underline{
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+

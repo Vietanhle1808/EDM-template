@@ -1,0 +1,150 @@
+* {
+  hyphens: initial;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100% !important;
+    width: 100% !important;
+    font-family:  helvetica, arial;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: black;
+  background: #707070;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  outline: none !important;
+  box-sizing: border-box !important;
+}
+
+table {
+  -ms-hyphens: auto;
+  -ms-text-size-adjust: 100% !important;
+  -webkit-hyphens: auto;
+  -webkit-text-size-adjust: 100% !important;
+  border: none;
+  border-spacing: 0 !important;
+  font-weight: 400;
+  hyphens: auto;
+  line-height: 28px;
+  margin: 0 auto;
+  padding: 0;
+  border-collapse: collapse;
+  mso-line-height-rule: exactly;
+}
+
+table td, table th {
+  font-size: 14px;
+  line-height: 28px;
+  margin: 0;
+  mso-table-lspace: 0pt !important;
+  mso-table-rspace: 0pt !important;
+  -ms-hyphens: initial;
+  -ms-text-size-adjust: 100% !important;
+  -webkit-hyphens: initial;
+  -webkit-text-size-adjust: 100% !important;
+  font-family: helvetica, arial;
+  font-weight: 400;
+  hyphens: initial;
+  letter-spacing: -0.2px;
+  word-wrap: break-word;
+  mso-line-height-rule: exactly;
+  color: black;
+}
+ol,
+ul {
+  /* We don't touch horizontal margins to prevent hiding bullets in Oultook */
+  margin: 0;
+  padding: 0;
+}
+ol li,
+ul li {
+  margin: 0;
+  padding: 0;
+}
+a, a:hover, a:visited, a:hover:visited{
+  color: #002C60;
+  cursor: pointer;
+}
+img.float-left {
+  float: left;
+  text-align: left;
+}
+.columnConnect {
+  width: 50%;
+}
+img {
+  border: 0;
+  outline: none;
+  text-decoration: none;
+  display: block;
+  -ms-interpolation-mode: bicubic;
+}
+@media only screen and (max-width: 599px) {
+
+  /* Targets only Gmail Android */
+  div>u~div .wrapper {
+    min-width: 100%;
+  }
+
+  /* Targets both Gmail iOS and Gmail Android (Nexus, pixel) */
+  u~div .wrapper {
+    min-width: 100vw;
+  }
+
+  /* What it does: Overrides email-container's desktop width and forces it into a 100% fluid width. */
+  .email-container {
+    width: 100%;
+  }
+
+  .text-center-mb {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  .columnConnect,
+  .columnCall {
+    padding: 0 !important;
+  }
+  /* ======== Column Styles ======== */
+  .templateColumnContainer {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /**
+* @tab Mobile Styles
+* Hide on Mobile
+*/
+  .hideOnMobile {
+    display: none !important;
+    font-size: 0 !important;
+    max-height: 0 !important;
+    line-height: 0 !important;
+    mso-hide: all !important;
+  }
+
+  /*
+* show on PC
+*/
+  .hideOnPC {
+    display: table !important;
+    font-size: auto !important;
+    max-height: auto !important;
+    line-height: 0 !important;
+    mso-hide: none !important;
+    width: 100%;
+  }
+  a, a:hover, a:visited, a:hover:visited{
+    color: #002C60;
+    cursor: none;
+  }
+}

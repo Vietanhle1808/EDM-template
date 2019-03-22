@@ -1,0 +1,119 @@
+extends layout/_layout
+block content
+  include mixins/_mixins
+  +ie-open({table:600})
+  table(border="0" cellpadding="0" cellspacing="0")
+    tr
+      td.px-global.bg-feature.py-global
+        table(width="100%" border="0" cellspacing="0" cellpadding="0")
+          tr
+            td
+              +title_section('Feature offers') 
+          tr
+            td
+              +spacer(10)
+          tr
+            td.two-column
+              table(width="100%" border="0" cellspacing="0" cellpadding="0")
+                tr
+                  td.columnConnect.templateColumnContainer
+                    table(width="100%" border="0" cellspacing="0" cellpadding="0")
+                      tr
+                        td.bg-white
+                          table(style="min-height:265px;" width="100%" border="0" cellspacing="0" cellpadding="0")
+                            tr
+                              td
+                                img(src="https://gallery.mailchimp.com/5514cb64ff3fe33013b8b76e4/images/f3566628-f8cd-4a2d-a4e6-f098dd1383a7.png", alt="").w-100
+                          table(style="min-height:335px;" width="100%" border="0" cellspacing="0" cellpadding="0")
+                            tr
+                              td.px-details-car
+                                table
+                                  tr
+                                    td
+                                      +price_cars('Tucson – Go','From $27,990 driveaway<sup>[D]</sup>')
+                                  tr
+                                    td
+                                      +spacer(15)
+                                  tr
+                                    td.border_bottom
+                                  tr
+                                    td
+                                      +spacer(15)
+                                table(width="100%" border="0" cellspacing="0" cellpadding="0")
+                                  tr
+                                    td Features
+                                  tr
+                                    td.text-gray
+                                      table(width="100%" border="0" cellspacing="0" cellpadding="0").details-feature
+                                        tr
+                                          th 	&#8226;
+                                          td Cascading front grille
+                                        tr
+                                          th 	&#8226;
+                                          td Rear view camera
+                                        tr
+                                          th &#8226;
+                                          td(style="font-size:12.4px;").line-height-m Apple CarPlay™ & Android™ Auto #[sup 	&#91;P1&#93;]
+                                        tr
+                                          th 	&#8226;
+                                          td LED daytime running lights
+                                table(width="100%" border="0" cellspacing="0" cellpadding="0")
+                                  tr
+                                    td
+                                      +spacer(20)
+                                  tr
+                                    td
+                                      +one-btn('https://www.hyundai.com.au/offers/tucson','View offer')
+                  td.hide-pc.columnConnect-space.templateColumnContainer
+                    +spacer(25)
+                  td.columnConnect.templateColumnContainer
+                    table(width="100%" border="0" cellspacing="0" cellpadding="0")
+                      tr
+                        td.bg-white
+                          table(style="min-height:265px;" width="100%" border="0" cellspacing="0" cellpadding="0")
+                            tr
+                              td
+                                img(src="https://gallery.mailchimp.com/5514cb64ff3fe33013b8b76e4/images/23c19fbe-2252-416a-83ba-25b691af43e4.png", alt="").w-100
+                          table(style="min-height:335px;" width="100%" border="0" cellspacing="0" cellpadding="0")
+                            tr
+                              td.px-details-car
+                                table
+                                  tr
+                                    td
+                                      +price_cars('I30 - Go','From $20,990 driveaway<sup>[D]</sup>')
+                                  tr
+                                    td
+                                      +spacer(15)
+                                  tr
+                                    td.border_bottom
+                                  tr
+                                    td
+                                      +spacer(15)
+                                table(width="100%" border="0" cellspacing="0" cellpadding="0")
+                                  tr
+                                    td Features
+                                  tr
+                                    td.text-gray
+                                      table(width="100%" border="0" cellspacing="0" cellpadding="0").details-feature
+                                        tr
+                                          th 	&#8226;
+                                          td 8" touchscreen
+                                        tr
+                                          th 	&#8226;
+                                          td Full size spare wheel
+                                        tr
+                                          th &#8226;
+                                          td(style="font-size:12.4px;").line-height-m Apple CarPlay™ & Android™ Auto #[sup 	&#91;P1&#93;]
+                                        tr
+                                          th 	&#8226;
+                                          td 5yrs Unlimited km Warranty#[sup 	&#91;P1&#93;]
+                                table(width="100%" border="0" cellspacing="0" cellpadding="0")
+                                  tr
+                                    td
+                                      +spacer(20)
+                                  tr
+                                    td
+                                      +one-btn('https://www.hyundai.com.au/offers/tucson','View offer')
+  +ie-close
+
+

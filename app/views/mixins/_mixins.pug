@@ -1,0 +1,137 @@
+//- - href1 = "background-image: url(" + background + ")";
+//- important mixin
+mixin spacer(num)
+  +ie-open({table:600})
+  table(border="0" cellpadding="0" cellspacing="0")&attributes(attributes).line-heigh-0.no-spacing
+    tbody
+      tr
+        td(height!=num).no-spacing.line-heigh-0
+  +ie-close
+
+mixin ie-open(props)
+  - props = props || {};
+  - table = props.table ? 'max-width="' + props.table + '"' : '';
+  - cell = props.cell ? 'max-width="' + props.cell + '"' : '';
+  |<!--[if (mso)|(IE)]>
+  |<table align="center" class="preheader" cellpadding="0" cellspacing="0" role="presentation" width="600" style="width: 600px; max-width: 100%;">
+  |<![endif]-->
+mixin ie-close(props)
+  - props = props || {};
+  |<!--[if mso]></table>
+  |<![endif]-->
+
+//- button
+
+mixin button-fill(props)
+  - props = props || {};
+  |<!--[if mso]>
+  |<v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:55px;v-text-anchor:middle;width:216px;"strokecolor="#002C60" fillcolor="#002C60">
+  |<w:anchorlock/>
+  |<center style="color:#ffffff;font-family:sans-serif;font-size:18px;font-weight:bold;">Explore all offers</center>
+  |</v:rect>
+  |<![endif]-->
+
+
+mixin button(props)
+  - props = props || {};
+  |<!--[if mso]>
+  |<v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:55px;v-text-anchor:middle;width:216px;" strokecolor="#002C60" fillcolor="white">
+  |<w:anchorlock/>
+  |<center style="color:#002C60;font-family:sans-serif;font-size:13px;font-weight:bold;">Contact a dealer</center>
+  |</v:rect>
+  |<![endif]-->
+
+//-------------------------------------------------------------//
+//----------------------- MIXIN FOR IMAGES ----------------------//
+//-------------------------------------------------------------//
+
+//- Mixin for 1 IMG have TAG a and FULL WIDTH
+mixin table_1img_a(src, alt, href)
+  - href =  "" + href + "";
+  +ie-open({table:600})
+  table(border="0" width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;").global-img&attributes(attributes)
+    tr
+      td
+        a(href!= href target="_blank")
+          img(src!=src, alt!=alt).w-100.no-spacing
+  +ie-close
+
+mixin table_1img_a_center(src, alt, href)
+  - href =  "" + href + "";
+  +ie-open({table:600})
+  table(border="0" width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;").global-img&attributes(attributes)
+    tr
+      td(align="center" valign="middle")
+        a(href!= href target="_blank")
+          img(src!=src, alt!=alt).w-100.no-spacing
+  +ie-close
+
+
+
+
+//- Mixin for 1 IMG FULL WIDTH - center
+mixin table_1img_center(src, alt)
+  +ie-open({table:600})
+  table(border="0" cellpadding="0" cellspacing="0").global-img&attributes(attributes).w-100
+    tr
+      td(align="center" valign="middle")
+        img(src!=src, alt=alt).w-100.no-spacing
+  +ie-close
+
+
+//- Mixin for 1 IMG Logo
+mixin logo-header-pc(src, alt, href)
+  +ie-open({table:600})
+  table(border="0" width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;").global-img&attributes(attributes)
+    tr
+      td.hideOnMobile
+        +table_1img_a(src, alt, href)
+  +ie-close
+
+
+mixin logo-header-mobile-center(src, alt, href)
+  +ie-open({table:600})
+  table(border="0" width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;").global-img&attributes(attributes)
+    tr
+      td(align="center" valign="middle").hideOnPC
+        +table_1img_a_center(src, alt, href)
+  +ie-close
+        
+
+
+//-------------------------------------------------------------//
+//----------------------- MIXIN FOR BUTTON ----------------------//
+//-------------------------------------------------------------//
+
+
+//- Mixin for 2 button
+
+mixin two-btn(href1, href2, button_fill,button)
+  - href1 =  "" + href1 + "";
+  - href2 =  "" + href2 + "";
+  +ie-open({table:600})
+  table(border="0" width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+    tr
+      td.font-m.columnConnect.templateColumnContainer.text-center.text-center-mb
+        +button-fill
+        a.text-center-mb.btn.btn-fill(href!= href1 target="_blank")!= button_fill
+      td.hide-pc.columnConnect-space.templateColumnContainer.space-btween-btn
+        +spacer(16)
+      td.font-m.columnConnect.templateColumnContainer.text-left.text-center-mb
+        +button(props)
+        a.text-center-mb.btn.btn-2-mobile(href!= href2 target="_blank")!= button
+  +ie-close
+
+
+//- mixin for 1 btn
+mixin one-btn(href1, button)
+  - href1 =  "" + href1 + "";
+  +ie-open({table:600})
+  table(border="0" width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")&attributes(attributes)
+    tr
+      td.font-m.text-center
+        +button(props)
+        a.btn(href!= href1 target="_blank")!= button
+  +ie-close
+
+
