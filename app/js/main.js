@@ -1,71 +1,67 @@
-// var eleNavTopic = document.querySelectorAll('.mobile-title-topic');
-// function openNavMobilelv3(){
-//     eleNavTopic.forEach.call(eleNavTopic, (eachTopic) =>{
-//         eachTopic.addEventListener('click', () =>{
-//             toggleElm(eachTopic.parentElement.querySelectorAll('.mobile-list-nav-lv3')[0], 'open-nav-lv3');
-//             toggleElm(eachTopic.querySelector('.icon-title'), 'close-child');
-//             toggleElm(eachTopic, 'open-child');
-//         });
-//     });
-// };
-// openNavMobilelv3();
+// trigger document ready
+handleIEBrowser();
+dropdownGlobal();
+
+window.addEventListener('scroll', function() {
+});
+
+// trigger window onload
+window.onload = function () {
+  detectLoadpage();
+};
+
+// trigger window resize
+var timeout;
+
+// Listen for resize events
+window.addEventListener('resize', function (event) {
+
+  // If timer is null, reset it to 66ms and run your functions.
+  // Otherwise, wait until timer is cleared
+  if (!timeout) {
+    timeout = setTimeout(function () {
+      // Reset timeout
+      timeout = null;
+
+      // fire event
+
+    }, 66);
+  }
+}, false);
 
 
-var headerGlobalLink = document.querySelectorAll('.header-link-global-content');
+//================================================================================
+function detectLoadpage() {
+  document.body.classList.add('is-loaded');
+}
 
 
-// $('.page-view-all-thumb').slick({
-//     responsive: [
-//     {
-//       breakpoint: 1005,
-//       settings: 'unslick';
-//     },
-//     {
-//       breakpoint: 1000,
-//       settings: {
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//         infinite: false,
-//         dots: false,
-//         arrows: false,
-//         centerMode: true,
-//       }
-//     },
-//   ]
-// });
+function dropdownGlobal() {
+  var dropdowns = document.querySelectorAll('.dropdown');
+  if (dropdowns.length > 0) {
+    dropdowns.forEach(function (elDropdown) {
+      elDropdown.addEventListener('click', function (e) {
+        var _this = this;
+        var dropdownMenu = _this.querySelector('.dropdown-menu');
+        if(globalFunction.domExists(dropdownMenu)) {
+          var siblingEle = globalFunction.getSiblings(_this);
 
-// var headerWrapper = document.querySelector('.header-box-wrapper');
-// console.log(headerGlobalLink);
+          siblingEle.forEach(function (elSibl) {
+            elSibl.classList.remove('show');
+          });
+          _this.classList.toggle('show');
+        }
+      });
+    });
+  }
+}
 
+function handleIEBrowser() {
+  function customizeIE(isOpera, isFirefox, isSafari, isIE, isEdge, isChrome, isBlink) {
+    if(isIE) {
+      document.body.classList.add('ie-browser');
+    }
+  }
+  globalFunction.detectBrowser(customizeIE);
+}
 
-// function handleHoverNavShowMore() {
-//     var navMoreItem = document.querySelectorAll('.show-more-single-item');
-
-//     if (navMoreItem.length > 0) {
-//       navMoreItem.forEach(function (el, index) {
-//         el.onmouseenter = function (event) {
-//           // add/remove class active
-//           var sibEl = event.target.parentElement.children;
-//           for (var i = 0; i < sibEl.length; i++) {
-//             sibEl[i].classList.remove('is-active');
-//           }
-//           event.target.classList.add('is-active');
-
-//           // show/hide content match parent
-//           var attDataParent = event.target.getAttribute('data-nav-parent-id');
-//           var navContent = document.querySelectorAll('.show-more-nav-content');
-//           navContent.forEach(function (el, index) {
-//             el.classList.remove('is-active');
-//             if (el.getAttribute('data-nav-child-id') === attDataPrent) {
-//               el.classList.add('is-active')
-//             }
-//           });
-
-//           // handle height show more nav box
-//           var hBoxNav = el.closest('.show-more-nav-box').querySelector('.show-more-nav-box-container').getBoundingClientRect().height;
-//           el.closest('.show-more-nav-box').style.height = hBoxNav + 'px';
-//           // console.log(hBoxNav);
-//         }
-//       });
-//     }
-//   }

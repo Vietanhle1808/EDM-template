@@ -1,15 +1,14 @@
-@import 'normalize';
+@import 'plugins/normalize';
+@import 'plugins/tiny-slider';
+
 @import 'variables';
-@import 'alignment';
+@import 'mixins';
+@import 'extends';
+@import 'fonts';
 @import 'global';
-
-// Layout
 @import 'layout';
+@import 'icon-moon';
 
-// responsive when you use gulp, must comment it when you gulp build.
-// @import 'file-style-header/_media-responsive.scss';
-
-
-
-// header
-@import 'components';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/custom-ie';

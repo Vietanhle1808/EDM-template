@@ -1,7 +1,25 @@
-/node_modules
-yarn.lock
-yarn.log
-.DS_Store
-app/.DS_Store
+## General
+.cvs
+.htaccess
+.svn
+*.bak
 *.log
-/dist
+*.swp
+*.sublime-*
+.idea
+
+## Windows
+Desktop.ini
+Thumbs.db
+
+## Mac
+.DS_Store
+
+## Development
+.sass-cache
+bower
+bower_components
+node_modules
+dist
+
+design

@@ -1,128 +1,74 @@
-// typo
-.text-light {
-  color: $light !important;
+* {
+  outline: none !important;
+  box-sizing: border-box !important;
 }
 
-.text-small {
-  font-size: $small-font-size;
-  color: $small-font-color;
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: $font-weight-default;
+  font-family: $font-body;
   line-height: 1.5;
-}
-
-.text-underline {
-  text-decoration: underline;
-}
-
-.tran-cap{
-  text-transform: capitalize;
-}
-
-.tran-up{
-  text-transform: uppercase;
-}
-.text-primary {
-  color: $primary-color;
-}
-
-.text-secondary {
-  color: $secondary-color;
-}
-
-.text-lead {
-  font-size: $lead-font-size;
-  font-weight: $font-weight-bold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: $dark;
 }
 
-.text-bold {
+main {
+  background: white;
+  position: relative;
+  z-index: 2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
   font-weight: $font-weight-bold;
+  font-size: 3.5rem;
 }
 
-.text-tiny {
-  font-size: $tiny-font-size;
-  color: $primary-color;
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.line-height-15 {
-  line-height: 15px;
+img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
 }
 
-.text-black{
-  color: black;
+p {
+  margin: 0 0 2.5rem 0;
+  font-weight: $font-weight-regular;
 }
 
-.no_underline{
+a {
   text-decoration: none;
+  transition: color 0.3s $cubic3;
+  color: $primary-color;
+  font-size: 1.2rem;
 }
 
-//spacing
-
-.px-global {
-  padding: 0 $global-padding;
+.body-wrapper {
+  overflow: hidden;
 }
 
-.no-spacing {
-  padding: 0 !important;
-  margin: 0 !important;
+.is-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
-.p-half-global {
-  padding: $global-half-padding;
+.is-off {
+  display: none !important;
 }
-
-
-.p-global {
-  padding: $global-padding;
-}
-.px-half-global{
-  padding-left: $global-half-padding;
-  padding-right: $global-half-padding;;
-}
-
-.py-global {
-  padding-top: $global-padding;
-  padding-bottom: $global-padding;
-}
-
-.py-half-global {
-  padding-top: $global-padding/2;
-  padding-bottom: $global-padding/2;
-}
-
-.px-global {
-  padding-left: $global-padding;
-  padding-right: $global-padding;
-}
-.pl-20{
-  padding-left: 20px;
-}
-
-.vertical-top{
-  vertical-align: top;
-}
-.w-40{
-  width: 40%;
-}
-.w-60{
-  width: 60%;
-}
-
-.title-footer{
-  color: $color-link;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

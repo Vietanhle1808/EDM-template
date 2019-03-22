@@ -1,45 +1,44 @@
-#Create by:
-Mr Viet Anh
+# FE starter with Gulp, PUG, SASS
 
-Many thanks for 
+This is a Pug and Sass starter project using gulp for task automation.
 
-- Mr Cian (help me to create inline)
+## Local Resources Included:
 
-#version 4
+- Normalize CSS for reset CSS on browsers.
 
-This EDM template for create a new project EDM.
+## Gulp Tasks:
 
-How does it work?
+On the gulp side there are utilities listed bellow
 
-1. index - help you list index edm
-2. your title email will be your file'name.pug
-3. the workflow: 
-  block components > layout > Your edm.pug(your_title.pug) > Index 
-
-
-How does it help?
-1. fixed Gmail App in Ios
-2. Fixed center in Outlook
-3. Can Use Gulp (pug + Scss) to build EDM
-4. maintainance is very easy with variables file.
-5. automatic to copy file media-responsive into head's tag style
-6. setup render only 1 file css in app/css from scss
-7. Set automatic gulp-build to html inline style.
-
-How can you help me?
-
-1. Fix file gulpfile.js to remove any no need syntax (js, compress)
-2. continue...
-
+- compile sass
+- live browser reload
+- concat css into one file and minify it
+- auto prefix css
+- concat js into one file and minify it
+- minify images
+- cache minified images
+- send all above into a dist folder + copy fonts
+- clean unused files
+- ESLint JavaScript code
+- critical CSS
 
 ## How to use:
 
 1. Clone to your desktop.
 2. Run `npm install`.
 3. Run `gulp` to generate the project and be able to make changes as needed.
-4. You should re-style variables
-5. create components 
-6. style components 
-7. style responsive in _media-responsive.css
-8. Stop the gulp, and run `gulp build` to build your site.
-9. done.....!
+4. Stop the gulp, and run `gulp build` to build your site.
+5. Copy the dist directory to your server and you are set.
+6. Deploy critical css:
+- HTML in dist folder:
+  + Remove line <link rel="stylesheet" type="text/css" href="css/criticalCSS.css"> on head
+  + Copy all code inside "dist/css/criticalCSS.css" to <style></style> on head
+
+## JS plugin listing to use:
+1. Slider carousel:
+https://github.com/ganlanyuan/tiny-slider
+
+## CSS / SASS Styleguide
+1. Airbnb:
+https://github.com/airbnb/css
+

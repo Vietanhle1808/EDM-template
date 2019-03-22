@@ -1,19 +1,24 @@
 var gulp = require('gulp');
+var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var useref = require('gulp-useref');
+var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
+var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence').use(gulp);
 var pug = require('gulp-pug');
+var eslint = require('gulp-eslint');
 var watch = require('gulp-watch');
-var rename = require('gulp-rename');
-var inlineCSS = require('gulp-inline-css');
 const autoprefixer = require('gulp-autoprefixer');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const plugins = gulpLoadPlugins();
+var babel = require("gulp-babel");
+const babelMinify = require("gulp-babel-minify");
+const minify = require('gulp-minify');
 
 gulp.task('browserSync', function() {
   browserSync.init({
@@ -24,29 +29,20 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('sass', function() {
-  return gulp.src(['app/sass/**/*.scss', '!app/sass/file-style-header']) //Source all files ending with.scss in scss directory and its subdirectories
-    .pipe(plugins.plumber({
-      errorHandler: function (err) {
-        console.log(err);
-        this.emit('end');
-      }
-    }))
+  return gulp.src('app/sass/**/*.scss') //Source all files ending with.scss in scss directory and its subdirectories
+    .pipe(sourcemaps.init())
+    .pipe(plugins.plumber())
     .pipe(sass())
-    .pipe(rename('styles.css'))
     .pipe(autoprefixer({
       browsers: ['last 2 versions']
     }))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('app/css'))
 });
 
 gulp.task('criticalCSS', () => {
   return gulp.src('app/sass/criticalCSS.scss')
-    .pipe(plugins.plumber({
-      errorHandler: function (err) {
-        console.log(err);
-        this.emit('end');
-      }
-    }))
+    .pipe(plugins.plumber())
     .pipe(plugins.sass.sync({
       outputStyle: 'compressed',
       precision: 10,
@@ -55,29 +51,22 @@ gulp.task('criticalCSS', () => {
     .pipe(plugins.autoprefixer({
       browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']
     }))
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('watch', function() {
   gulp.watch('app/sass/**/*.scss', ['sass']);
   gulp.watch('app/views/**/*.pug', ['pug']);
-  gulp.watch('app/*.html', browserSync.reload);
+  gulp.watch('app/js/**/*.js', browserSync.reload);
+  // gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('app/css/*.css', browserSync.reload);
 });
 
 gulp.task('useref', function() {
   return gulp.src('app/*.html') //Source all html files
     .pipe(useref())
-    .pipe(gulpIf('*.css', cssnano())) //Minifies only if it is css file
-    .pipe(gulp.dest('dist'))
-});
-
-gulp.task('inline', function() {
-  return gulp.src(['app/*.html', '!app/home.html'])
-    .pipe(inlineCSS({
-      applyStyleTags: true,
-      removeStyleTags: false
-    }))
+    .pipe(gulpIf('*.js', minify())) //Minifies only if it is js file
+    .pipe(gulpIf('*.css', cssnano())) //Minifies only if it is css file 
     .pipe(gulp.dest('dist'))
 });
 
@@ -86,6 +75,20 @@ gulp.task('lic', function() {
     .pipe(gulp.dest('dist'))
 });
 
+gulp.task('imagemin', function() {
+  return gulp.src('app/images/*.+(png|jpg|gif|swg|svg|ico)')
+    .pipe(cache(imagemin({
+      gif: {
+        interlaced: true
+      }
+    })))
+    .pipe(gulp.dest('dist/images'))
+});
+
+gulp.task('fonts', function() {
+  return gulp.src('app/fonts/**/*')
+    .pipe(gulp.dest('dist/fonts'))
+});
 
 gulp.task('clean:dist', function() {
   return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
@@ -104,14 +107,23 @@ gulp.task('pug', function buildHTML() {
     .pipe(gulp.dest('app'))
 });
 
+gulp.task('default', function(callback) {
+  runSequence(['sass', 'criticalCSS', 'pug', 'browserSync', 'watch'],
+    callback
+  );
+});
+
 gulp.task('build', function(callback) {
-  runSequence('clean:dist', ['sass', 'criticalCSS', 'pug', 'useref', 'lic'], 'inline', callback);
+  runSequence('clean:dist', ['sass', 'criticalCSS', 'pug', 'useref', 'lic', 'imagemin', 'fonts'], callback);
 });
 
 gulp.task('clean', function(callback) {
   runSequence('clean:dist', 'clean:app', callback);
 });
 
-gulp.task('default', function(callback) {
-  runSequence(['sass', 'criticalCSS', 'pug', 'browserSync', 'watch'], callback);
+gulp.task('lint', function() {
+  return gulp.src('app/js/index.js')
+    // Load a specific ESLint config
+    .pipe(eslint('.eslintrc.js'))
+    .pipe(eslint.format());
 });
