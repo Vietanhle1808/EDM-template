@@ -1,141 +1,111 @@
 @charset "UTF-8";
-/* Normalize.css */
-/* Contents of this file must be inlined to your newsletter in production */
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a,
-li a,
-p a {
-  /* Set sexy underline styling for links except images */
-  text-decoration: none;
-  color: #2837b8 !important;
-  border-bottom: #d3d6f0 1px solid; }
-
-h1 {
-  /* Mail.ru <h1> styling fix */
-  font-size: 2em;
-  line-height: initial;
-  margin: 0.67em 0;
-  padding: 0; }
-
-table {
-  /* Null tables spaces */
-  border-spacing: 0;
-  border-collapse: collapse; }
-
-table td {
-  padding: 0;
-  margin: 0; }
-
-table th {
-  padding: 0;
-  font-weight: normal; }
-
-img {
-  /* Flexible images fix + prevent any borders for images */
-  max-width: 100%;
-  border: 0;
-  outline: 0;
-  /* Set image's ALT text styling */
-  color: #2837b8;
-  font-size: 14px; }
-
-ol,
-ul {
-  /* We don't touch horizontal margins to prevent hiding bullets in Oultook */
-  margin: 0;
-  padding: 0; }
-
-ol li,
-ul li {
-  margin: 0;
-  padding: 0; }
-
 /* Global
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* BG
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Width page
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Fonts
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Font-weight
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Font-size
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-table.text-center,
-th.text-center,
-td.text-center,
-h1.text-center,
-h2.text-center,
-h3.text-center,
-h4.text-center,
-h5.text-center,
-h6.text-center,
-p.text-center,
-span.text-center {
-  text-align: center; }
+.body-container {
+  background: #fff; }
 
-table.text-left,
-th.text-left,
-td.text-left,
-h1.text-left,
-h2.text-left,
-h3.text-left,
-h4.text-left,
-h5.text-left,
-h6.text-left,
-p.text-left,
-span.text-left {
-  text-align: left; }
+img {
+  display: block;
+  -ms-interpolation-mode: bicubic; }
 
-table.text-right,
-th.text-right,
-td.text-right,
-h1.text-right,
-h2.text-right,
-h3.text-right,
-h4.text-right,
-h5.text-right,
-h6.text-right,
-p.text-right,
-span.text-right {
-  text-align: right; }
+p {
+  margin: 0 0 10px 0;
+  font-weight: 400; }
 
-.text-center {
-  text-align: center; }
-
-img.float-left {
-  float: left;
-  text-align: left; }
-
-.center {
-  max-width: 600px;
-  width: 100%;
+.mso-center {
+  mso-table-lspace: 0pt !important;
+  mso-table-rspace: 0pt !important;
+  word-wrap: break-word;
   margin: 0 auto; }
 
-.text-left {
-  text-align: left; }
+.max-width {
+  width: 600px; }
+
+.bg-light-green {
+  background: #F2F8EC; }
+
+.bg-pink-light {
+  background: #ece8f0; }
+
+.bg-secondary {
+  background: #471E6C; }
+
+.bg-gray {
+  background: #f7f7f7; }
 
 .w-25 {
   width: 25%; }
 
+.w-40 {
+  width: 40%; }
+
 .w-50 {
   width: 50%; }
+
+.w-60 {
+  width: 60%; }
 
 .w-75 {
   width: 75%; }
 
-.text-light {
-  color: #fff !important; }
+.w-100 {
+  width: 100%; }
+
+.no-spacing {
+  padding: 0 !important;
+  margin: 0 !important; }
+
+.vertical-top {
+  vertical-align: top; }
+
+.p-global {
+  padding: 30px; }
+
+.p-half-global {
+  padding: 15px; }
+
+.px-half-global {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.py-global {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+.px-global {
+  padding-left: 30px;
+  padding-right: 30px; }
+
+.py-half-global {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.p-extra {
+  padding: 60px 60px; }
+
+.p-extra-y {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+
+.p-extra-x {
+  padding-left: 60px;
+  padding-right: 60px; }
 
 .text-small {
   font-size: 11.2px;
   color: #0a0a0a;
   line-height: 1.5; }
+
+.text-light {
+  color: #fff !important; }
 
 .text-underline {
   text-decoration: underline; }
@@ -167,67 +137,54 @@ img.float-left {
   font-size: 10px;
   color: #0a0a0a; }
 
-.line-height-15 {
-  line-height: 15px; }
-
 .text-black {
-  color: black; }
+  color: #1d1d1d; }
 
-.no_underline {
-  text-decoration: none; }
+small {
+  font-size: 11.2px;
+  color: #0a0a0a; }
 
-.no-spacing {
-  padding: 0 !important;
-  margin: 0 !important; }
-
-.p-half-global {
-  padding: 15px; }
-
-.p-global {
-  padding: 30px; }
-
-.px-half-global {
-  padding-left: 15px;
-  padding-right: 15px; }
-
-.py-global {
-  padding-top: 30px;
-  padding-bottom: 30px; }
-
-.py-half-global {
-  padding-top: 15px;
-  padding-bottom: 15px; }
-
-.px-global {
-  padding-left: 30px;
-  padding-right: 30px; }
-
-.pl-20 {
-  padding-left: 20px; }
-
-.vertical-top {
-  vertical-align: top; }
-
-.w-40 {
-  width: 40%; }
-
-.w-60 {
-  width: 60%; }
-
-.title-footer {
-  color: #2199e8; }
+.line-heigh-0 {
+  line-height: 0px !important;
+  mso-line-height-rule: exactly; }
 
 .text-white {
   color: #FFFFFF !important; }
 
-.font-m {
-  font-size: 18px; }
+.text-center {
+  text-align: center; }
+
+.border_bottom {
+  border-bottom: 1px solid black; }
+
+.text-gray {
+  color: #f7f7f7; }
+
+.font-bold {
+  font-weight: bold; }
+
+.no_underline {
+  text-decoration: none; }
+
+* {
+  -webkit-hyphens: initial;
+      -ms-hyphens: initial;
+          hyphens: initial;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100% !important;
+  width: 100% !important;
+  font-family: helvetica, arial; }
 
 body {
-  font-family: helvetica, arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #0a0a0a;
+  color: black;
   background: #eeeeee;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -237,222 +194,115 @@ body {
   -webkit-box-sizing: border-box !important;
           box-sizing: border-box !important; }
 
-img {
-  height: auto;
-  width: auto;
-  max-width: 100%;
-  display: block; }
+table {
+  -ms-hyphens: auto;
+  -ms-text-size-adjust: 100% !important;
+  -webkit-hyphens: auto;
+  -webkit-text-size-adjust: 100% !important;
+  border: none;
+  border-spacing: 0 !important;
+  font-weight: 400;
+  hyphens: auto;
+  line-height: 28px;
+  margin: 0 auto;
+  padding: 0;
+  border-collapse: collapse;
+  mso-line-height-rule: exactly; }
 
-p {
-  margin: 0 0 10px 0;
-  font-weight: 400; }
-
-small {
-  font-size: 11.2px;
-  color: #0a0a0a; }
-
-.body-container {
-  background: #fff;
-  max-width: 600px;
-  margin: 0 auto; }
-
-.mso-center {
+table td, table th {
+  font-size: 14px;
+  line-height: 28px;
+  margin: 0;
   mso-table-lspace: 0pt !important;
   mso-table-rspace: 0pt !important;
-  word-wrap: break-word;
-  margin: 0 auto; }
-
-.max-width {
-  width: 600px; }
-
-* {
+  -ms-hyphens: initial;
+  -ms-text-size-adjust: 100% !important;
   -webkit-hyphens: initial;
-      -ms-hyphens: initial;
-          hyphens: initial; }
+  -webkit-text-size-adjust: 100% !important;
+  font-family: helvetica, arial;
+  font-weight: 400;
+  hyphens: initial;
+  letter-spacing: -0.2px;
+  word-wrap: break-word;
+  mso-line-height-rule: exactly;
+  color: black; }
 
-.bg-light-green {
-  background: #F2F8EC; }
+ol,
+ul {
+  /* We don't touch horizontal margins to prevent hiding bullets in Oultook */
+  margin: 0;
+  padding: 0; }
 
-.bg-pink-light {
-  background: #ece8f0; }
-
-.bg-secondary {
-  background: #471E6C; }
-
-hr {
-  margin: 10px 0; }
-
-.bg-gray {
-  background: #f7f7f7; }
+ol li,
+ul li {
+  margin: 0;
+  padding: 0; }
 
 a, a:hover, a:visited, a:hover:visited {
   color: #002C60;
   cursor: pointer; }
 
-.line-heigh-0 {
-  line-height: 0px !important;
-  mso-line-height-rule: exactly; }
-
-/* What it does: Remove spaces around the email design added by some email clients. */
-/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  font-family: Helvetica, Arial,sans-serif; }
-
-/* What it does: Stops email clients resizing small text. */
-* > body {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%; }
-
-/* What it does: Stops Outlook from adding extra spacing to tables. */
-table {
-  margin: 0;
-  border: none;
-  padding: 0;
-  width: 100%;
-  mso-table-lspace: 0pt;
-  mso-table-rspace: 0pt;
-  font-family: helvetica, arial;
-  -ms-hyphens: auto;
-  -webkit-hyphens: auto;
-  font-weight: 400;
-  hyphens: auto;
-  border-spacing: 0;
-  border-collapse: collapse;
-  line-height: 28px; }
-
-table td {
-  word-wrap: break-word;
-  margin: 0;
-  -webkit-hyphens: initial;
-      -ms-hyphens: initial;
-          hyphens: initial;
-  font-size: 14px;
-  font-weight: 400;
-  font-family: helvetica, arial;
-  line-height: 28px;
-  letter-spacing: -0.2px; }
-
-table th {
-  word-wrap: break-word;
-  margin: 0;
-  font-weight: 400;
-  font-family: helvetica, arial;
-  line-height: 28px;
-  -webkit-hyphens: initial;
-      -ms-hyphens: initial;
-          hyphens: initial; }
+img.float-left {
+  float: left;
+  text-align: left; }
 
 .columnConnect {
-  width: 49%; }
+  width: 50%; }
 
-.columnConnect-space {
-  width: 2%; }
+img {
+  border: 0;
+  outline: none;
+  text-decoration: none;
+  display: block;
+  -ms-interpolation-mode: bicubic; }
 
-.nav-columnConnect-logo {
-  width: 46%; }
-
-.nav-columnConnect-all-nav {
-  width: 54%; }
-
-.logo-header td {
-  padding-left: 20px; }
-
-.logo-header img {
-  width: auto; }
-
-.nav-img {
-  width: 20px; }
-
-.pd-logo-header {
-  padding: 10px 0; }
-
-.pd-nav-header {
-  padding: 15px 0 3px; }
-
-.px-global {
-  padding-left: 30px;
-  padding-right: 30px; }
-
-.hideOnPC {
-  display: none;
-  font-size: 0;
-  max-height: 0;
-  line-height: 0;
-  mso-hide: all; }
-
-a, a:hover, a:visited, a:hover:visited {
-  cursor: auto; }
-
-.p-btn-extra {
-  padding-bottom: 40px;
-  padding-left: 60px;
-  padding-right: 60px; }
-
-.space-btween-btn {
-  padding: 6px; }
-
-/* END Data Table Styles */
-/* Media Queries */
-* {
-  -ms-text-size-adjust: 100% !important;
-  -webkit-text-size-adjust: 100% !important; }
-
-.ExternalClass {
-  width: 100%; }
-
-table,
-td {
-  mso-table-lspace: 0pt !important;
-  mso-table-rspace: 0pt !important; }
-
-table {
-  border-spacing: 0 !important; }
-
-.ExternalClass,
-.ExternalClass * {
-  line-height: 100%; }
-
-table {
-  border-collapse: collapse;
-  margin: 0 auto; }
-
-.bg-color-orrange {
-  background-color: #F4AC39;
-  margin-bottom: -20px; }
-
-.text-super-big {
-  font-size: 40px;
-  font-weight: bold; }
-
-.wapper-title-box {
-  padding-top: 20px;
-  padding-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 20px; }
-
-.title_price_car {
-  padding-bottom: 10px; }
-
-.p-extra {
-  padding: 45px 60px; }
-
-.p-extra-y {
-  padding-top: 45px;
-  padding-bottom: 45px; }
-
-.p-extra-x {
-  padding-left: 60px;
-  padding-right: 60px; }
+@media only screen and (max-width: 599px) {
+  /* Targets only Gmail Android */
+  div > u ~ div .wrapper {
+    min-width: 100%; }
+  /* Targets both Gmail iOS and Gmail Android (Nexus, pixel) */
+  u ~ div .wrapper {
+    min-width: 100vw; }
+  /* What it does: Overrides email-container's desktop width and forces it into a 100% fluid width. */
+  .email-container {
+    width: 100%; }
+  .text-center-mb {
+    text-align: center !important;
+    margin: 0 auto !important; }
+  .columnConnect,
+  .columnCall {
+    padding: 0 !important; }
+  /* ======== Column Styles ======== */
+  .templateColumnContainer {
+    display: block !important;
+    width: 100% !important; }
+  /**
+* @tab Mobile Styles
+* Hide on Mobile
+*/
+  .hideOnMobile {
+    display: none !important;
+    font-size: 0 !important;
+    max-height: 0 !important;
+    line-height: 0 !important;
+    mso-hide: all !important; }
+  /*
+* show on PC
+*/
+  .hideOnPC {
+    display: table !important;
+    font-size: auto !important;
+    max-height: auto !important;
+    line-height: 0 !important;
+    mso-hide: none !important;
+    width: 100%; }
+  a, a:hover, a:visited, a:hover:visited {
+    color: #002C60;
+    cursor: none; } }
 
 .btn {
   border: 1px solid #002C60;
   display: inline-block;
-  font-family: helvetica, arial;
   font-size: 18px;
   padding: 12.5px 44px;
   -webkit-text-size-adjust: none;
@@ -463,121 +313,3 @@ table {
 .btn-fill {
   background: #002C60;
   color: white !important; }
-
-.bg-feature {
-  background: #F1F4F9; }
-
-.bg-white {
-  background: white; }
-
-.border_bottom {
-  border-bottom: 1px solid black; }
-
-.px-details-car {
-  padding: 0 15px 30px; }
-
-.table_title .table_title_content {
-  margin: 0 auto;
-  max-width: 420px;
-  font-size: 24px;
-  text-align: center;
-  line-height: 32px;
-  padding-bottom: 20px;
-  font-weight: bold;
-  letter-spacing: -0.27px; }
-
-.table_car_card2 th, .table_car_card2 td {
-  vertical-align: top;
-  text-align: left;
-  padding: 0 10px; }
-
-.table_car_card2 .title {
-  margin-top: 0;
-  margin-bottom: 7px;
-  font-size: 14px;
-  line-height: 22px;
-  letter-spacing: -.25px; }
-
-.table_car_card2 .price {
-  font-size: 12px;
-  margin-bottom: 0;
-  line-height: 20px; }
-
-.table_car_card2 .sale_price {
-  font-size: 18px;
-  line-height: 22px;
-  color: #DD7000;
-  letter-spacing: -0.25px; }
-  .table_car_card2 .sale_price sup {
-    font-size: 6px; }
-
-.take-advantage .table_car_card2 {
-  max-width: 24%;
-  display: inline-block; }
-
-.w-100 {
-  width: 100%; }
-
-.text-gray {
-  color: #666666; }
-
-.details-feature td {
-  padding-left: 10px;
-  font-size: 14px;
-  line-height: 12px;
-  letter-spacing: -0.2px; }
-
-.line-height-m {
-  line-height: 14px; }
-
-.text-name-car {
-  font-size: 21px;
-  font-weight: bold;
-  line-height: 23px; }
-
-.price_car {
-  font-size: 18px; }
-
-.text-caption {
-  font-size: 20px !important;
-  color: white !important;
-  padding: 10px 40px !important;
-  font-weight: bold; }
-
-.bg-orange {
-  background: #DD7000; }
-
-.bg-blue-nav {
-  background: #002C60; }
-
-.nav-element {
-  border-left: 1px solid white; }
-
-.w-49 {
-  width: 49%; }
-
-.w-2 {
-  width: 2%; }
-
-.px-extra {
-  padding-left: 60px;
-  padding-right: 60px; }
-
-.socials .icon {
-  display: inline-block;
-  float: left; }
-  .socials .icon:not(:last-child) {
-    margin-right: 19px; }
-  .socials .icon img {
-    width: 30px;
-    height: auto; }
-
-.p-footer-y {
-  padding-top: 18px !important;
-  padding-bottom: 18px !important; }
-
-.font-bold {
-  font-weight: bold; }
-
-.btn-feature td a {
-  padding: 12.5px 74px !important; }

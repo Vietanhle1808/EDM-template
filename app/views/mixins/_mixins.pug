@@ -20,27 +20,6 @@ mixin ie-close(props)
   |<!--[if mso]></table>
   |<![endif]-->
 
-//- button
-
-mixin button-fill(props)
-  - props = props || {};
-  |<!--[if mso]>
-  |<v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:55px;v-text-anchor:middle;width:216px;"strokecolor="#002C60" fillcolor="#002C60">
-  |<w:anchorlock/>
-  |<center style="color:#ffffff;font-family:sans-serif;font-size:18px;font-weight:bold;">Explore all offers</center>
-  |</v:rect>
-  |<![endif]-->
-
-
-mixin button(props)
-  - props = props || {};
-  |<!--[if mso]>
-  |<v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:55px;v-text-anchor:middle;width:216px;" strokecolor="#002C60" fillcolor="white">
-  |<w:anchorlock/>
-  |<center style="color:#002C60;font-family:sans-serif;font-size:13px;font-weight:bold;">Contact a dealer</center>
-  |</v:rect>
-  |<![endif]-->
-
 //-------------------------------------------------------------//
 //----------------------- MIXIN FOR IMAGES ----------------------//
 //-------------------------------------------------------------//
@@ -103,23 +82,42 @@ mixin logo-header-mobile-center(src, alt, href)
 //----------------------- MIXIN FOR BUTTON ----------------------//
 //-------------------------------------------------------------//
 
+//- button
+
+mixin button-fill(props)
+  - props = props || {};
+  |<!--[if mso]>
+  |<v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:55px;v-text-anchor:middle;width:216px;"strokecolor="#002C60" fillcolor="#002C60">
+  |<w:anchorlock/>
+  |<center style="color:#ffffff;font-family:sans-serif;font-size:18px;font-weight:bold;">Explore all offers</center>
+  |</v:rect>
+  |<![endif]-->
+
+
+mixin button(props)
+  - props = props || {};
+  |<!--[if mso]>
+  |<v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:55px;v-text-anchor:middle;width:216px;" strokecolor="#002C60" fillcolor="white">
+  |<w:anchorlock/>
+  |<center style="color:#002C60;font-family:sans-serif;font-size:13px;font-weight:bold;">Contact a dealer</center>
+  |</v:rect>
+  |<![endif]-->
+
 
 //- Mixin for 2 button
 
-mixin two-btn(href1, href2, button_fill,button)
+mixin two-btn(href1, href2, button_1, button)
   - href1 =  "" + href1 + "";
   - href2 =  "" + href2 + "";
   +ie-open({table:600})
   table(border="0" width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
     tr
       td.font-m.columnConnect.templateColumnContainer.text-center.text-center-mb
-        +button-fill
-        a.text-center-mb.btn.btn-fill(href!= href1 target="_blank")!= button_fill
+        a.btn(href!= href1 target="_blank")!= button_1
       td.hide-pc.columnConnect-space.templateColumnContainer.space-btween-btn
         +spacer(16)
       td.font-m.columnConnect.templateColumnContainer.text-left.text-center-mb
-        +button(props)
-        a.text-center-mb.btn.btn-2-mobile(href!= href2 target="_blank")!= button
+        a.btn(href!= href1 target="_blank")!= button
   +ie-close
 
 
