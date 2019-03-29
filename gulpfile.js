@@ -24,7 +24,7 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('sass', function() {
-  return gulp.src(['app/sass/**/*.scss', '!app/sass/file-style-header']) //Source all files ending with.scss in scss directory and its subdirectories
+  return gulp.src(['app/sass/**/*.scss', '!app/sass/file-style-header/*.*']) //Source all files ending with.scss in scss directory and its subdirectories
     .pipe(plugins.plumber({
       errorHandler: function (err) {
         console.log(err);
@@ -72,14 +72,14 @@ gulp.task('useref', function() {
     .pipe(gulp.dest('dist'))
 });
 
-// gulp.task('inline', function() {
-//   return gulp.src(['app/*.html', '!app/home.html'])
-//     .pipe(inlineCSS({
-//       applyStyleTags: true,
-//       removeStyleTags: false
-//     }))
-//     .pipe(gulp.dest('dist'))
-// });
+gulp.task('inline', function() {
+  return gulp.src(['app/*.html', '!app/home.html'])
+    .pipe(inlineCSS({
+      applyStyleTags: true,
+      removeStyleTags: false
+    }))
+    .pipe(gulp.dest('dist'))
+});
 
 gulp.task('lic', function() {
   return gulp.src('app/*.md') //Source all license files
@@ -105,7 +105,7 @@ gulp.task('pug', function buildHTML() {
 });
 
 gulp.task('build', function(callback) {
-  runSequence('clean:dist', ['sass', 'criticalCSS', 'pug', 'useref', 'lic'], callback);
+  runSequence('clean:dist', ['sass', 'criticalCSS', 'pug', 'useref', 'lic'], 'inline', callback);
 });
 
 gulp.task('clean', function(callback) {

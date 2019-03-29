@@ -1,63 +1,45 @@
-* {
-  hyphens: initial;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
+
 html,
 body {
     margin: 0;
     padding: 0;
     height: 100% !important;
     width: 100% !important;
-    font-family:  helvetica, arial;
+    font-family:  Roboto, helvetica, arial;
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   color: black;
-  background: #eeeeee;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
   outline: none !important;
   box-sizing: border-box !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  hyphens: initial;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 table {
-  -ms-hyphens: auto;
-  -ms-text-size-adjust: 100% !important;
-  -webkit-hyphens: auto;
-  -webkit-text-size-adjust: 100% !important;
   border: none;
   border-spacing: 0 !important;
-  font-weight: 400;
-  hyphens: auto;
-  line-height: 28px;
-  margin: 0 auto;
-  padding: 0;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
   border-collapse: collapse;
-  mso-line-height-rule: exactly;
+  margin: 0 auto;
 }
 
 table td, table th {
   font-size: 14px;
   line-height: 28px;
-  margin: 0;
   mso-table-lspace: 0pt !important;
   mso-table-rspace: 0pt !important;
-  -ms-hyphens: initial;
-  -ms-text-size-adjust: 100% !important;
-  -webkit-hyphens: initial;
-  -webkit-text-size-adjust: 100% !important;
   font-family: helvetica, arial;
   font-weight: 400;
-  hyphens: initial;
   letter-spacing: -0.2px;
   word-wrap: break-word;
-  mso-line-height-rule: exactly;
-  color: black;
 }
 ol,
 ul {
@@ -74,19 +56,27 @@ a, a:hover, a:visited, a:hover:visited{
   color: #002C60;
   cursor: pointer;
 }
-img.float-left {
-  float: left;
-  text-align: left;
+img {
+  border: 0 !important;
+  outline: none !important;
+  text-decoration: none !important;
+  display: block;
 }
 .columnConnect {
   width: 50%;
 }
-img {
-  border: 0;
-  outline: none;
-  text-decoration: none;
-  display: block;
-  -ms-interpolation-mode: bicubic;
+
+.hideOnPC{
+  display: none;
+  mso-hide: all;
+}
+
+.px-global-header{
+  padding-left: 30px;;
+  padding-right: 30px;
+}
+.pt-all-section{
+  padding-top: 30px;
 }
 @media only screen and (max-width: 599px) {
 
@@ -126,10 +116,6 @@ img {
 */
   .hideOnMobile {
     display: none !important;
-    font-size: 0 !important;
-    max-height: 0 !important;
-    line-height: 0 !important;
-    mso-hide: all !important;
   }
 
   /*
@@ -137,14 +123,66 @@ img {
 */
   .hideOnPC {
     display: table !important;
-    font-size: auto !important;
-    max-height: auto !important;
-    line-height: 0 !important;
-    mso-hide: none !important;
-    width: 100%;
   }
-  a, a:hover, a:visited, a:hover:visited{
-    color: #002C60;
-    cursor: none;
+  .border-header-nav .nav-header a, a:hover, a:visited, a:hover:visited{
+    color: white;
+    cursor: default;
+  }
+  /* SETUP for components*/
+  .border-header-nav{
+    border-top: 1px solid white;
+    height: 67px;
+  }
+  .wrapper-logo-header-pc .global-img td{
+    padding: 0 !important;
+    algin: center;
+    valgin: middle;
+  }
+
+  .first-header-nav{
+    border-left: none !important;
+  }
+  .wrapper-logo-header-pc .global-img img{
+    margin: 0 auto !important;
+    padding: 0 !important;
+    
+  }
+  .px-global-header{
+    padding: 0 !important;
+  }
+  .pd-nav-top{
+    padding: 0 !important;
+  }
+  .px-extra{
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+  .text-center-mb{
+    text-align: center;
+  }
+  .wrapper-button-normal{
+    padding-top: 15px !important;
+  }
+  .pt-all-section{
+    padding-top: 0px !important;
+  }
+  .columnConnect-right,.columnConnect-left{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .columnConnect-right{
+    padding-top: 20px !important;
+  }
+  .text-title{
+    padding: 0 20px !important;
+  }
+  .list-car-items{
+    padding: 0px !important;
+  }
+  .advantage_car_img_items{
+    max-width: 140px !important;
+  }
+  .social-left{
+    width: 100% !important;
   }
 }

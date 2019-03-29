@@ -1,3 +1,4 @@
+
 .btn{
   border:1px solid #002C60;
   display:inline-block;
@@ -12,4 +13,157 @@
 .btn-fill{
   background: #002C60;
   color: white !important;
+}
+
+// header
+
+.logo-header-images img{
+  max-width: 115px;
+}
+
+// NAV
+.pd-nav-top{
+  padding: 6px 0;
+}
+
+.border-header-nav{
+  border-left: 1px solid white;
+}
+.columnConnect-logo{
+  width: 46%;
+}
+.columnConnect-nav{
+  width: 54%;
+}
+
+.wrapper-logo-header-pc .global-img td{
+  padding-left: 20px;
+}
+
+.p-caption{
+  padding: 10px 60px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+}
+
+.py-section{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.pt-section{
+  padding-top: 30px;
+}
+.pb-section{
+  padding-bottom: 30px;
+}
+
+.text-title{
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  padding: 0 70px;
+}
+.px-detail-car{
+  padding: 0 15px 30px;
+}
+
+.name-car{
+  font-size: 21px;
+  font-weight: bold;
+  hyphens: auto;
+  line-height: 14px;
+  margin: 0 !important;
+  padding: 0;
+}
+
+.price-cars{
+  font-size: 18px;
+  line-height: 14px;
+  margin: 0 !important;
+  padding: 0;
+}
+
+.outline-details-car td{
+  padding-left: 10px;
+}
+.columnConnect-left{
+  padding-right: 12px;
+}
+.columnConnect-right{
+  padding-left: 10px;
+}
+
+
+
+
+// mixin car-card(name_car, price, sub_car, src, alt)
+//   table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")&attributes(attributes)
+//     tr
+//       td.advantage_name_car!= name_car
+//     tr
+//       td(height="10")
+//     tr
+//       td.advantage_price_car!= price
+//     tr
+//       td.advantage_sub_car!= sub_car
+//     tr
+//       td(algin="center" valign="middle")
+//         img(src!= src, alt!= alt width="110")
+
+.advantage_name_car{
+  font-family: helvetica, arial;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0 !important;
+  margin-bottom: 7px;
+  margin-top: 0;
+  padding: 0 !important;
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word;
+}
+.advantage_price_car{
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word;
+}
+
+.advantage_sub_car{
+  color: #DD7000;
+  font-family: helvetica, arial;
+  font-size: 15px;
+  font-weight: 400;
+  hyphens: auto;
+  letter-spacing: -0.25px;
+  line-height: 22px;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word;
+}
+
+// .list-car-items{
+.advantage_list_car .columnConnect-left, .advantage_list_car .columnConnect-right{
+  padding: 0;
+}
+
+.list-car-items{
+  padding: 0 10px;
+  width: 50%;
+}
+
+.logo-right{
+  padding-top: 15px;
+}
+
+.logo-social-mobile img{
+  width: 120px;
 }

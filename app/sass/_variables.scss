@@ -11,27 +11,34 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 $primary-color          : #0a0a0a;
 $secondary-color        : #471E6C;
+$dark-blue              : #002C60;
+$gray-dark              : #707070;
+$color-orange           : #DD7000;
+$blue-light             : #F1F4F9;
+$light                  : #E4DCD3;
+
+
+
+
+
+
+
 $pink-light             : #ece8f0;
-$light                  : #fff;
+
 $gray-light             : #f8f8f8;
 $gray                   : #f7f7f7;
 $medium-gray            : #eeeeee;
-$gray-dark              : #707070;
 $gray-bold              : #848484;
 $gray-soft              : #F2F2F2;
 $dark                   : #1d1d1d;
 $gray-normal            : #666;
-
 $darker                 : #000;
 $blue-banner            : rgba(12, 24, 47, 0.8);
 $blue-dark              : #0C182F;
 $blue-darker            : #3B4557;
-$blue-light             : #355EAD;
 $blue-soft              : #BFE2EF;
 $green-dark             : #005B7C;
 $green                  : #03a87c;
-
-
 $color-link             : #2199e8;
 $color-facebook         : #3b5998;
 $color-pinterest        : #BB0F24;
@@ -47,11 +54,11 @@ $global-line-height     : 28px;
 $global-margin          : 16px;
 $global-radius          : 3px;
 $global-padding-extra   : 60px;
-$global-half-padding    :$global-padding/2; 
+$global-half-padding    : $global-padding/2; 
 /* BG
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-$color-bg-table         : $light;
+$color-bg-table         : $gray-bold;
 $body-bg                : $medium-gray;
 
 

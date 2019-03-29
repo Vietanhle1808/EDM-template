@@ -1,10 +1,444 @@
 extends layout/_layout
 block content
   include mixins/_mixins
-  +ie-open({table:600})
-  table(border="0" width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+  //- Table wrapper all content - no change anything in it
+  table( class="wrapper" align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%; margin: 0 auto!important; background:white;")
+    //begin nav header
     tr
-      td.px-global.bg-feature.py-global
-  +ie-close
+      td.pt-all-section
+        table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+          tr
+            td.px-global-header
+              table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;" align="center" valign="top").bg-blue-dark
+                tr
+                  td.columnConnect-logo.templateColumnContainer(style="max-height:68px;")
+                    a(href="https://www.hyundai.com.au/" target="_blank")
+                      table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                        tr
+                          td.pd-nav-top.wrapper-logo-header
+                            +logo-header-pc('https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/b2000886-7645-439d-a8c6-e41ad532ac6f.png','logo header', '1').logo-header-images.hideOnMobile
+                            table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;" align="center" valign="top").hideOnPC
+                              tr
+                                td( align="center" valign="middle" height="68")
+                                  img(src="https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/b2000886-7645-439d-a8c6-e41ad532ac6f.png", alt="img mobile")   
+                  td.columnConnect-nav.templateColumnContainer(style="max-height:68px;")
+                    table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                      tr
+                        td.w-25(align="center" ).border-header-nav.first-header-nav
+                          +header_nav('https://www.hyundai.com.au/shop/book-a-test-drive', 'https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/9e138edb-086d-43e4-95c2-f082de421a92.png', 'test drive', 'Test Drive')
+                        td.w-25(align="center" ).border-header-nav
+                          +header_nav('https://www.hyundai.com.au/dealer/', 'https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/bf6a6b73-1d7c-4e2a-8d8f-fcd381c1edb0.png', 'Dealer', 'Dealer')
+                        td.w-25(align="center" ).border-header-nav
+                          +header_nav('https://www.hyundai.com.au/shop/calculator', 'https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/f802c5be-16b5-4fb2-b9ce-57ea5329a3ba.png', 'Quote', 'Quote')
+                        td.w-25(align="center" ).border-header-nav
+                          +header_nav('http://cars.hyundai.com.au/new_cars/?_ga=2.247096898.774776258.1552780897-1034709253.1550183455', 'https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/3d96e480-aac0-4e14-bb9e-3d84dbef5e66.png', 'Car Locator', 'Car Locator')
+    //End nav header
+    //begin hero banner
+    tr
+      td(width="100%" style="vertical-align: top;")
+        table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;").hideOnMobile
+          tr
+            td(style="max-width:600px;").px-global-header
+              a(href="#" target="_blank")
+                img(src="https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/6e9b7e76-f429-4b6e-9597-865d197c65bf.jpg", alt="" width="100%")
+        table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;" align="center" valign="top")
+          tr
+            td(align="center" valign="middle")
+              a(href="#" target="_blank")
+                table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;").hideOnPC
+                  tr
+                    td(align="center" valign="middle" width="100%")
+                      img(src="https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/ed0bfc58-5c14-4cea-840f-d0cb28e32848.jpg", alt="img mobile" width="100%")
+    //End hero banner
+    //begin Description Hero banner
+    tr
+      td(width="100%" style="vertical-align: top;")
+        table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+          tr
+            td(style="max-width:600px;").px-global-header
+              table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                tr
+                  td.bg-orange.p-caption.text-white.text-center <font  color="#FFFFFF">Double Factory Bonuses. Offer ends 31<sup style="font-size: 12px;">st</sup> March.</font>
+    //End Description Hero banner
+    //Begin text section
+    tr
+      td(style="font-size:18px; line-height:28px;").px-extra
+        table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+          tr
+            td(height="30")
+          tr
+            td(style="font-size:18px; line-height:28px;") Hi &#60;First Name&#62;,
+          tr
+            td(height="10" style="line-height:0px;")
+          tr
+            td(style="font-size:18px; line-height:28px;") Factory Bonuses are twice as nice in March! For the whole month we’ll be Doubling Factory Bonuses, meaning you could save up to $3,000* on a wide range of models. It’s one of our biggest events of the year, but hurry because this incredible offer must end soon.
+    //End text section
+    //Begin button
+    tr
+      td
+        table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+          tr
+            td(height="30")
+          tr
+            td
+              table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                tr
+                  td.columnConnect.templateColumnContainer.text-center-mb.text-right
+                    table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                      tr
+                        td.columnConnect-left
+                          table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                            tr
+                              td.text-right.text-center-mb
+                                |<!--[if mso]>
+                                |<v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.hyundai.com.au/offers" style="height:55px;v-text-anchor:middle;width:224px;" strokecolor="#002C60" fillcolor="#002C60">
+                                |<w:anchorlock/>
+                                |<center style="color:#ffffff;font-family:sans-serif;font-size:18px;font-weight:bold;">Explore all offers</center>
+                                |</v:rect>
+                                |<![endif]-->
+                                a(href="https://www.hyundai.com.au/offers" class="text-center" style="background-color:#002C60;border:1px solid #002C60;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:18px;font-weight:bold;line-height:55px;text-align:center;text-decoration:none;width:224px;-webkit-text-size-adjust:none;mso-hide:all;" target="_blank") Explore all offers
+                  td.text-right.columnConnect.templateColumnContainer.text-center-mb.text-left
+                    table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                      tr
+                        td.columnConnect-right
+                          table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                            tr
+                              td
+                                |<!--[if mso]>
+                                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:55px;v-text-anchor:middle;width:224px;" strokecolor="#002C60" fillcolor="white">
+                                <w:anchorlock/>
+                                <center style="color:#002C60;font-family:sans-serif;font-size:18px;font-weight:bold;">Contact a dealer</center>
+                                </v:rect>
+                                <![endif]-->
+                                a(href="https://www.hyundai.com.au/offers" style="background-color:#fff;border:1px solid #002C60;color:#002C60;display:inline-block;font-family:sans-serif;font-size:18px;font-weight:bold;line-height:55px;text-align:center;text-decoration:none;width:224px;-webkit-text-size-adjust:none;mso-hide:all;" target="_blank") Contact a dealer
+          tr
+            td(height="30")
+    //End button
+    //Begin Featured section
+    tr
+      td.px-global.bg-light-blue
+        +title_section('Feature offers')
+        table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+          tr
+            td.columnConnect.templateColumnContainer
+              table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                tr
+                  td.columnConnect-left
+                    table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                      tr
+                        td(style="background:white;")
+                          img(src="https://gallery.mailchimp.com/e57a2d8e3f88d8192e81cd76f/images/249aac0a-8295-4f7b-a860-83023a469899.png", alt="" width="100%")
+                          table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                            tr
+                              td(style="background:white;").px-detail-car
+                                table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                                  tr
+                                    td(height="20")
+                                  tr
+                                    td.name-car Tucson – Go
+                                  tr
+                                    td(height="10")
+                                  tr
+                                    td.price-cars From $27,990 driveaway#[sup &#91;D&#93;]
+                                  tr
+                                    td(height="15")
+                                  tr
+                                    td(style="border-bottom: 1px solid black; font-size:14px; padding: 0; margin: 0;")
+                                  tr
+                                    td(height="15")
+                                  tr
+                                    td.features-detail-car
+                                      table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                                        tr
+                                          td Features
+                                        tr
+                                          td(style="font-size:14px;").text-gray
+                                            table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;").outline-details-car
+                                              tr
+                                                th 	&#8226;
+                                                td  Cascading front grille
+                                              tr
+                                                th 	&#8226;
+                                                td  Rear view camera
+                                              tr
+                                                th 	&#8226;
+                                                td(style="font-size:13px;")  Apple CarPlay™ & Android™ Auto #[sup  &#91;P1&#93;]
+                                              tr
+                                                th 	&#8226;
+                                                td  LED daytime running lights
+                                  tr
+                                    td(height="20")
+                                  tr
+                                    td.text-center-mb
+                                      |<!--[if mso]>
+                                      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:55px;v-text-anchor:middle;width:224px;" strokecolor="#002C60" fillcolor="white">
+                                      <w:anchorlock/>
+                                      <center style="color:#002C60;font-family:sans-serif;font-size:18px;font-weight:bold;">View offer</center>
+                                      </v:rect>
+                                      <![endif]-->
+                                      a(href="https://www.hyundai.com.au/offers" style="background-color:#fff;border:1px solid #002C60;color:#002C60;display:inline-block;font-family:sans-serif;font-size:18px;font-weight:bold;line-height:55px;text-align:center;text-decoration:none;width:224px;-webkit-text-size-adjust:none;mso-hide:all;" target="_blank") View offer
+            td.columnConnect.templateColumnContainer
+              table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                tr
+                  td.columnConnect-right
+                    table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                      tr
+                        td(style="background:white;")
+                          img(src="https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/4d2896ad-d77c-4b17-94c8-ad66b225a96b.png", alt="" width="100%")
+                          table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                            tr
+                              td(style="background:white;").px-detail-car
+                                table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                                  tr
+                                    td(height="20")
+                                  tr
+                                    td.name-car Tucson – Go
+                                  tr
+                                    td(height="10")
+                                  tr
+                                    td.price-cars From $27,990 driveaway#[sup &#91;D&#93;]
+                                  tr
+                                    td(height="15")
+                                  tr
+                                    td(style="border-bottom: 1px solid black; font-size:14px; padding: 0; margin: 0;")
+                                  tr
+                                    td(height="15")
+                                  tr
+                                    td.features-detail-car
+                                      table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                                        tr
+                                          td Features
+                                        tr
+                                          td(style="font-size:14px;").text-gray
+                                            table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;").outline-details-car
+                                              tr
+                                                th 	&#8226;
+                                                td  Cascading front grille
+                                              tr
+                                                th 	&#8226;
+                                                td  Rear view camera
+                                              tr
+                                                th 	&#8226;
+                                                td(style="font-size:13px;")  Apple CarPlay™ & Android™ Auto #[sup  &#91;P1&#93;]
+                                              tr
+                                                th 	&#8226;
+                                                td  LED daytime running lights
+                                  tr
+                                    td(height="20")
+                                  tr
+                                    td.text-center-mb
+                                      |<!--[if mso]>
+                                      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:55px;v-text-anchor:middle;width:224px;" strokecolor="#002C60" fillcolor="white">
+                                      <w:anchorlock/>
+                                      <center style="color:#002C60;font-family:sans-serif;font-size:18px;font-weight:bold;">View offer</center>
+                                      </v:rect>
+                                      <![endif]-->
+                                      a(href="https://www.hyundai.com.au/offers" style="background-color:#fff;border:1px solid #002C60;color:#002C60;display:inline-block;font-family:sans-serif;font-size:18px;font-weight:bold;line-height:55px;text-align:center;text-decoration:none;width:224px;-webkit-text-size-adjust:none;mso-hide:all;" target="_blank") View offer
+    //End Featured section
+    //Begin list car
+    tr
+      td.px-global.bg-light-blue.advantage_list_car
+        +title_section('Take advantage of Double Factory Bonuses until 31st March on a wide range of models.')
+        table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+          tr
+            td(height="20")
+          tr
+            td.columnConnect.templateColumnContainer
+              table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                tr
+                  td.columnConnect-left
+                    table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                      tr
+                        td.list-car-items
+                          +car-card('Santa FE- Active', 
+                            'Was $1000', 
+                            'Now $2000 Factory Bonus <sup>[B2]</sup>',
+                            'https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/e8ff8c46-e60d-4e91-b0f9-db08723341f3.png',
+                            'car')
+                        td.list-car-items
+                          +car-card('Santa FE- Active', 
+                            'Was $1000', 
+                            'Now $2000 Factory Bonus <sup>[B2]</sup>',
+                            'https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/e8ff8c46-e60d-4e91-b0f9-db08723341f3.png',
+                            'car')
+            td.columnConnect.templateColumnContainer
+              table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                tr
+                  td.columnConnect-right
+                    table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                      tr
+                        td.list-car-items
+                          +car-card('Santa FE- Active', 
+                            'Was $1000', 
+                            'Now $2000 Factory Bonus <sup>[B2]</sup>',
+                            'https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/e8ff8c46-e60d-4e91-b0f9-db08723341f3.png',
+                            'car')
+                        td.list-car-items
+                          +car-card('Santa FE- Active', 
+                            'Was $1000', 
+                            'Now $2000 Factory Bonus <sup>[B2]</sup>',
+                            'https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/e8ff8c46-e60d-4e91-b0f9-db08723341f3.png',
+                            'car')
+    //Begin button
+    tr
+      td.bg-light-blue
+        table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+          tr
+            td(height="30")
+          tr
+            td
+              table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                tr
+                  td.columnConnect.templateColumnContainer.text-center-mb.text-right
+                    table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                      tr
+                        td.columnConnect-left
+                          table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                            tr
+                              td.text-right.text-center-mb
+                                |<!--[if mso]>
+                                |<v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.hyundai.com.au/offers" style="height:55px;v-text-anchor:middle;width:224px;" strokecolor="#002C60" fillcolor="#002C60">
+                                |<w:anchorlock/>
+                                |<center style="color:#ffffff;font-family:sans-serif;font-size:18px;font-weight:bold;">Explore all offers</center>
+                                |</v:rect>
+                                |<![endif]-->
+                                a(href="https://www.hyundai.com.au/offers" class="text-center" style="background-color:#002C60;border:1px solid #002C60;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:18px;font-weight:bold;line-height:55px;text-align:center;text-decoration:none;width:224px;-webkit-text-size-adjust:none;mso-hide:all;" target="_blank") Explore all offers
+                  td.text-right.columnConnect.templateColumnContainer.text-center-mb.text-left
+                    table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                      tr
+                        td.columnConnect-right
+                          table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                            tr
+                              td
+                                |<!--[if mso]>
+                                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:55px;v-text-anchor:middle;width:224px;" strokecolor="#002C60" fillcolor="white">
+                                <w:anchorlock/>
+                                <center style="color:#002C60;font-family:sans-serif;font-size:18px;font-weight:bold;">Contact a dealer</center>
+                                </v:rect>
+                                <![endif]-->
+                                a(href="https://www.hyundai.com.au/offers" style="background-color:#fff;border:1px solid #002C60;color:#002C60;display:inline-block;font-family:sans-serif;font-size:18px;font-weight:bold;line-height:55px;text-align:center;text-decoration:none;width:224px;-webkit-text-size-adjust:none;mso-hide:all;" target="_blank") Contact a dealer
+          tr
+            td(height="30")
+    //End button                 
+    //Begin social PC
+    tr
+      td.bg-light(style="mso-hide:all;")
+        table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+          tr
+            td(height="20" style="mso-hide:all;").hideOnMobile
+    tr
+      td.section-social.bg-light.w-100.hideOnMobile
+        table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+          tr
+            td.px-global
+              table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                tr
+                  td.social-left.w-50
+                    table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;" align="center" valign="top")
+                      tr
+                        td( valign="middle")
+                          a(href="#" style="display: inline-block; padding-right:10px;").float-left
+                            table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;" align="center" valign="top")
+                              tr
+                                td
+                                  img(src="https://gallery.mailchimp.com/e57a2d8e3f88d8192e81cd76f/images/cdbbf08b-4857-4303-8348-78ca09d6ebb9.png", alt="facebook" width="30").social-icon
+                        td( valign="middle")
+                          a(href="#" style="display: inline-block; padding-right:10px;").float-left
+                            table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;" align="center" valign="top")
+                              tr
+                                td
+                                  img(src="https://gallery.mailchimp.com/e57a2d8e3f88d8192e81cd76f/images/cdbbf08b-4857-4303-8348-78ca09d6ebb9.png", alt="facebook" width="30").social-icon
+                        td( valign="middle")
+                          a(href="#" style="display: inline-block; padding-right:10px;").float-left
+                            table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;" align="center" valign="top")
+                              tr
+                                td
+                                  img(src="https://gallery.mailchimp.com/e57a2d8e3f88d8192e81cd76f/images/cdbbf08b-4857-4303-8348-78ca09d6ebb9.png", alt="facebook" width="30").social-icon
+                        td( valign="middle")
+                          a(href="#" style="display: inline-block; padding-right:10px;").float-left
+                            table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;" align="center" valign="top")
+                              tr
+                                td
+                                  img(src="https://gallery.mailchimp.com/e57a2d8e3f88d8192e81cd76f/images/cdbbf08b-4857-4303-8348-78ca09d6ebb9.png", alt="facebook" width="30").social-icon
+                        td( valign="middle")
+                          a(href="#" style="display: inline-block; padding-right:10px;").float-left
+                            table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;" align="center" valign="top")
+                              tr
+                                td
+                                  img(src="https://gallery.mailchimp.com/e57a2d8e3f88d8192e81cd76f/images/cdbbf08b-4857-4303-8348-78ca09d6ebb9.png", alt="facebook" width="30").social-icon
+                  td(align="right" style="padding-bottom: 10px;").w-50
+                    a(href="#").text-right.float-right
+                      img(src="https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/1894c845-b84c-4a64-93fa-e5ff938ccd92.png", alt="" width="115")
+                tr
+                  td(height="7").bg-light
+    //End social PC
+    //Begin social Mobile
+    tr
+      td.section-social.bg-light.w-100.hideOnPC
+        table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+          tr
+            td.px-global
+              table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                tr
+                  td.w-100
+                    table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;" align="center" valign="top")
+                      tr
+                        td(height="15")
+                      tr
+                        td
+                          a(href="#" target="_blank")
+                            table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;").hideOnPC
+                              tr
+                                td
+                                  img(src="https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/1894c845-b84c-4a64-93fa-e5ff938ccd92.png", alt="img mobile" width="115")
+                      tr
+                        td(height="10")
+                      tr
+                        td
+                          table(align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                            tr
+                              td(valign="middle")
+                                a(href="#" style="display: inline-block; padding-right:10px;").float-left
+                                  table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;" align="center" valign="top").hideOnPC
+                                    tr
+                                      td
+                                        img(src="https://gallery.mailchimp.com/e57a2d8e3f88d8192e81cd76f/images/cdbbf08b-4857-4303-8348-78ca09d6ebb9.png", alt="facebook" width="30").social-icon
+                                a(href="#" style="display: inline-block; padding-right:10px;").float-left
+                                  table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;" align="center" valign="top").hideOnPC
+                                    tr
+                                      td
+                                        img(src="https://gallery.mailchimp.com/e57a2d8e3f88d8192e81cd76f/images/cdbbf08b-4857-4303-8348-78ca09d6ebb9.png", alt="facebook" width="30").social-icon
+                                a(href="#" style="display: inline-block; padding-right:10px;").float-left
+                                  table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;" align="center" valign="top").hideOnPC
+                                    tr
+                                      td
+                                        img(src="https://gallery.mailchimp.com/e57a2d8e3f88d8192e81cd76f/images/cdbbf08b-4857-4303-8348-78ca09d6ebb9.png", alt="facebook" width="30").social-icon
+                                a(href="#" style="display: inline-block; padding-right:10px;").float-left
+                                  table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;" align="center" valign="top").hideOnPC
+                                    tr
+                                      td
+                                        img(src="https://gallery.mailchimp.com/e57a2d8e3f88d8192e81cd76f/images/cdbbf08b-4857-4303-8348-78ca09d6ebb9.png", alt="facebook" width="30").social-icon
+                                a(href="#" style="display: inline-block; padding-right:10px;").float-left
+                                  table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;" align="center" valign="top").hideOnPC
+                                    tr
+                                      td
+                                        img(src="https://gallery.mailchimp.com/e57a2d8e3f88d8192e81cd76f/images/cdbbf08b-4857-4303-8348-78ca09d6ebb9.png", alt="facebook" width="30").social-icon
+              //- +spacer(10)
+    //End social mobile
+    //Begin footer
+    tr
+      td.px-global.pt-section(style="font-size:11px;line-height:17px;") Eque omnihiliquis magnimpor as as eum faccum quate volupit am reribus dandus nam volupic tiasimus quisi rae. Iliquia estorest, volorporat et eatur aut perum, odis am, venes eliquatibus net adipsum im vendam et aut verum quamus, odit lacerspe doluptatur. Officimint qui sed erchitae dunt, nonem estintem am faciet omniet et re, et ad eos et exceri comnimi, ut a nobitat iorrori volupta ection conse consequatur, omniene eturecab idelia con porem reium quibus. Is que dunt parum volo od ulpa dersperibea volupta volendite num invellaborum volupta sit, totatem quibus eostotatio tem quam quis reped quidel modicient odi cullita tatquasped eum asitatus. Catquam nis el moditas aut eatamus volorenis molesequiam nesecae ipsa dolorum int as a consedicium verum sequas es re et est, aliquuntus dolorem porrum lam alibusdam que verro comnima ximperf erovide licita quod et quae ea volum serio et venducimi, odionsequiam ab imi, soluptata nullatius molenim porerio. Aximus pro to dolecte aspel inctibus doloriamust quiam intotatur, ut voloria aut plabor si del ipsusda dolenia pliatum veliatiis versperati ut maio. Ibusanis eaque volupta simodit, ut ernatior arum quiat volupta sa nisinci duciistio. Itat ut et liqui ut pa dolores cimendio era con niat volupta tibusdaero quam reperatis et doluptas et, quo omniet qui omnis accus digendae re volum hitisciatur molupti onsequi destio omnienimus quibus alignatus arciunt.
+    tr
+      td(height="7")
+    tr
+      td.px-global
+        a(href="#" style="font-size:11px;line-height:17px;text-decoration: underline;") Unsubscribe
+    tr
+      td(height="10")
+    tr
+      td.px-global.pb-section(style="font-size:11px;line-height:17px;") ©2019 Copyright Hyundai Motor Company, Australia Pty Limited
+    //End footer
+
+
 
 
