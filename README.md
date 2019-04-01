@@ -34,24 +34,3 @@ How can you help me?
 9. Inline final html with file app/css/style.css
 8. copy style responsive in _media-responsive.scss style into file final in head tag <style></style>
 9. done.....!
-
-
-## JS plugin listing to use:
-
-1. Headroom:
-http://wicky.nillia.ms/headroom.js/
-
-2. Inview:
-https://camwiegert.github.io/in-view/
-
-3. Slider carousel:
-https://github.com/ganlanyuan/tiny-slider
-
-3. Parallax scrolling:
-https://github.com/nk-o/jarallax
-
-## CSS / SASS Styleguide
-
-1. Airbnb:
-https://github.com/airbnb/css
-
