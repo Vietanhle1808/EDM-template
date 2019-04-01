@@ -1,6 +1,5 @@
 #Create by:
-Mr Viet Anh
-
+Mr Viet Anh - https://www.facebook.com/mc.vietanh
 #version 6 Final
 
 This EDM template for create a new project EDM.
