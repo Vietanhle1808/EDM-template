@@ -28,7 +28,10 @@ p {
 
 a {
   display: block;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-hyphens: initial;
+      -ms-hyphens: initial;
+          hyphens: initial; }
 
 .max-width {
   width: 600px; }

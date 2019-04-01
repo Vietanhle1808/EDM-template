@@ -108,15 +108,17 @@ mixin header_nav(href, src, alt, text)
   table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")&attributes(attributes)
     tr
       td(algin="center" valign="middle").nav-header
-        a(target="_blank" href!=href)
+        a( href!=href target="_blank")
           table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
             tr
               td(align="center" valign="middle").pd-nav-top
-                img(src!=src, alt!=alt width="28" align="bottom" style="display: block; height: auto; margin: 0 auto !important; max-width: 100%; padding: 0 !important;").center-element
-                table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
-                  tr
-                    td(style="font-size:12px;").text-white.text-center
-                      font(style="color:white; ")= text
+                a( href!=href target="_blank")
+                  img(src!=src, alt!=alt width="28" align="bottom" style="display: block; height: auto; margin: 0 auto !important; max-width: 100%; padding: 0 !important;").center-element
+                  table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                    tr
+                      td(style="font-size:12px;").text-white.text-center
+                        a( href!=href target="_blank")
+                          font(style="color:white; ")= text
 
 //- nhét pd-nav-top vào để đảm bảo click ở nút nav nào cũng có thể nhận được giá trị thẻ A, Nếu như nhét vào 1 nút nav thì chỉ có thể nhận được giá trị thẻ A cho nút btn đó.
 

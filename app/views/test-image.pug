@@ -1,8 +1,37 @@
-//- include mixins/_mixins
-//- +ie-open({table:600})
-//- table(align="center" valign="top" width="600" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
-//-   tr
-//-     td(style="max-width:600px;").px-global-header
-//-       a(href="#")
-//-         img(src="https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/6e9b7e76-f429-4b6e-9597-865d197c65bf.jpg", alt="").w-100
-//- +ie-close
+extends layout/_layout
+block content
+  include mixins/_mixins
+  //- Table wrapper all content - no change anything in it
+  table( class="wrapper" align="center" valign="top" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%; margin: 0 auto!important; background:white;")
+    //begin nav header
+    tr
+      td.pt-all-section
+        table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+          tr
+            td.px-global-header
+              table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;" align="center" valign="top").bg-blue-dark
+                tr
+                  td.columnConnect-logo.templateColumnContainer(style="max-height:68px;")
+                    a(href="https://www.hyundai.com.au/" target="_blank")
+                      table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                        tr
+                          td.pd-nav-top.wrapper-logo-header
+                            +logo-header-pc('https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/b2000886-7645-439d-a8c6-e41ad532ac6f.png','logo header', '1').logo-header-images.hideOnMobile
+                            table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;" align="center" valign="top").hideOnPC
+                              tr
+                                td( align="center" valign="middle" height="68")
+                                  a(href="https://www.hyundai.com.au/" target="_blank")
+                                    img(src="https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/b2000886-7645-439d-a8c6-e41ad532ac6f.png", alt="img mobile").hideOnPC  
+                  td.columnConnect-nav.templateColumnContainer(style="max-height:68px;")
+                    table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                      tr
+                        td.w-25(align="center" ).border-header-nav.first-header-nav
+                          +header_nav('https://www.hyundai.com.au/shop/book-a-test-drive', 'https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/9e138edb-086d-43e4-95c2-f082de421a92.png', 'test drive', 'Test Drive')
+                        td.w-25(align="center" ).border-header-nav
+                          +header_nav('https://www.hyundai.com.au/dealer/', 'https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/bf6a6b73-1d7c-4e2a-8d8f-fcd381c1edb0.png', 'Dealer', 'Dealer')
+                        td.w-25(align="center" ).border-header-nav
+                          +header_nav('https://www.hyundai.com.au/shop/calculator', 'https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/f802c5be-16b5-4fb2-b9ce-57ea5329a3ba.png', 'Quote', 'Quote')
+                        td.w-25(align="center" ).border-header-nav
+                          +header_nav('http://cars.hyundai.com.au/new_cars/?_ga=2.247096898.774776258.1552780897-1034709253.1550183455', 'https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/3d96e480-aac0-4e14-bb9e-3d84dbef5e66.png', 'Car Locator', 'Car Locator')
+    //End nav header
+    

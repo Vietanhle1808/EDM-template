@@ -24,6 +24,7 @@ p {
 a{
   display: block;
   text-decoration: none;
+  hyphens: initial;
 }
 .max-width {
   width: $max-width;

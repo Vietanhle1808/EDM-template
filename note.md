@@ -25,6 +25,25 @@ table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width:
             td(align="center" valign="middle" width="100%")
               img(src="https://gallery.mailchimp.com/2e20b32d492bd62d510f96468/images/ed0bfc58-5c14-4cea-840f-d0cb28e32848.jpg", alt="img mobile" width="100%") 
 -->
+- Vấn đề cực kỳ quan trọng đó là trong gmail app và gmail chrome thì có thể nhận thẻ a ở ngoài table nhưng đối với outlook thì chỉ nhận thẻ a ngay sát content:
+<!-- 
+mixin header_nav(href, src, alt, text)
+  table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")&attributes(attributes)
+    tr
+      td(algin="center" valign="middle").nav-header
+        a( href!=href target="_blank")
+          table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+            tr
+              td(align="center" valign="middle").pd-nav-top
+                a( href!=href target="_blank")
+                  img(src!=src, alt!=alt width="28" align="bottom" style="display: block; height: auto; margin: 0 auto !important; max-width: 100%; padding: 0 !important;").center-element
+                  table(border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;")
+                    tr
+                      td(style="font-size:12px;").text-white.text-center
+                        a( href!=href target="_blank")
+                          font(style="color:white; ")= text
+ -->
+
 
 5. Để chỉnh màu cho text thì phải sử dụng thuộc tính <font  color="#FFFFFF"> content</font>
 6. Trên outlook thì cần lưu ý đặt thẻ thuộc tính text-align cần phải đặt ở thẻ td ngay ngoài của btn.
